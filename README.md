@@ -16,13 +16,13 @@ This project implements a **real-time face verification system** using a Siamese
 ## 📊 Project Workflow
 
 ### 1. **Data Collection and Preprocessing**
-- Images are collected and paired as **positive (same person)** and **negative (different people)**.
+- Images are collected for anchor, positive using webcam and for negative we used lfw faces dataset.
 - All images are resized to a uniform size.
 - Data augmentation is optionally used to improve generalization.
 
 ### 2. **Model Architecture**
-- A **single CNN** is used as a feature extractor and shared between both image inputs.
-- The two images are passed through the same CNN to extract embeddings.
+- A CNN is used as a feature extractor and shared between both image inputs.
+- The two images are passed through the **same CNN** to extract embeddings.
 - Embeddings are compared using the **absolute difference**.
 - The result passes through a Dense layer with a **sigmoid activation** to output similarity probability.
 
@@ -35,16 +35,9 @@ This project implements a **real-time face verification system** using a Siamese
 - Metrics tracked per epoch include **loss**, **precision**, and **recall**.
 - Model checkpoints are saved every 10 epochs.
 
-### 5. **Evaluation**
-- **Training Loss**: Decreases steadily over epochs.
-- **Precision**: Initially fluctuates due to few positive predictions, stabilizes above 99%.
-- **Recall**: Approaches 100% quickly and remains consistent.
-- Precision and recall graphs are plotted using Matplotlib.
-
-### 6. **Live Face Verification**
+### 5. **Live Face Verification**
 - A webcam-based system captures a real-time face frame.
 - The captured frame is compared against a reference image.
-- Uses OpenCV for real-time face detection and preprocessing.
-- Displays result: **"Verified"** or **"Not Verified"** on screen.
+- Displays result: **"True"** or **"False"** on screen.
 
 ---
