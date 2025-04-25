@@ -41,3 +41,6 @@ This project implements a **real-time face verification system** using a Siamese
 - Displays result: **"True"** or **"False"** on screen.
 
 ---
+## 📚 Reference
+- [Koch et al., "Siamese Neural Networks for One-shot Image Recognition" – CMU](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)
+
